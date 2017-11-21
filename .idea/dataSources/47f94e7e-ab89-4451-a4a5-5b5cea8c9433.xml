@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="prospring4_ch9b@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
+    <root id="1"/>
+    <schema id="2" parent="1" name="prospring4_ch9b">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="ch6prospring4"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="javastudy"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="onshope"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="prospring4_ch9a"/>
+    <schema id="10" parent="1" name="test"/>
+    <schema id="11" parent="1" name="testrpc"/>
+    <table id="12" parent="2" name="contact"/>
+    <column id="13" parent="12" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="14" parent="12" name="FIRST_NAME">
+      <Position>2</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="12" name="LAST_NAME">
+      <Position>3</Position>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="12" name="BIRTH_DATE">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="17" parent="12" name="VERSION">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="18" parent="12" name="UQ_CONTACT_1">
+      <ColNames>FIRST_NAME
+LAST_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="19" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="20" parent="12" name="UQ_CONTACT_1">
+      <ColNames>FIRST_NAME
+LAST_NAME</ColNames>
+      <UnderlyingIndexName>UQ_CONTACT_1</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
